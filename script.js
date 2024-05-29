@@ -1,3 +1,5 @@
+// code for desktop//
+
 let subStoreMenu = document.querySelector(".desktop__links--substores");
 let subComMenu = document.querySelector(".desktop__links--subcom");
 let mainStore = document.querySelector(".desktop__link--store");
@@ -151,3 +153,5 @@ gameCatNav.addEventListener('mouseleave', ()=>hidePopFlex(gameCat));
 lftBtn.addEventListener('click', ()=>slideLeft());
 rghtBtn.addEventListener('click', ()=>slideRight());
 readmore.addEventListener('click', ()=>readMore())
+
+//code for mobile
