@@ -155,3 +155,12 @@ rghtBtn.addEventListener('click', ()=>slideRight());
 readmore.addEventListener('click', ()=>readMore())
 
 //code for mobile
+
+let mobileMenuButton = document.querySelector(".menu-button");
+let sideBar = document.querySelector('.mobile__links');
+
+function sideBarOpen(){
+    sideBar.classList.add('opening');
+}
+
+mobileMenuButton.addEventListener('click', ()=>sideBarOpen());

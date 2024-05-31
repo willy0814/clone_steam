@@ -1532,7 +1532,7 @@ body{
         padding: 0.2px;
     }
 
-    .mobile .mobile__sidebar{
+    .mobile .menu-button{
         position: absolute;
         top: 20px;
         left:20px;
@@ -1541,11 +1541,15 @@ body{
         cursor: pointer;
     }
 
-    .mobile__sidebar .line{
+    .menu-button .line{
         width: 30px;
         border-top: 4px solid #bdbdbd;
         border-radius: 2px;
         position: absolute;
+    }
+
+    .menu-button:hover .line{
+        border-color: #fff;
     }
 
     .mobile .logo{
@@ -1559,15 +1563,15 @@ body{
         height: 36px;
     }
 
-    .mobile .mobile__sidebar .line:nth-child(1){
+    .mobile .menu-button .line:nth-child(1){
         top:0;
     }
 
-    .mobile .mobile__sidebar .line:nth-child(2){
+    .mobile .menu-button .line:nth-child(2){
         top: 10px;
     }
 
-    .mobile .mobile__sidebar .line:nth-child(3){
+    .mobile .menu-button .line:nth-child(3){
         top: 20px;
     }
 
@@ -1580,6 +1584,14 @@ body{
         left: -280px;
         color: #bdbdbd;
         background: #171a21;
+        transition: left 0.3s ease-in-out;
+        z-index: 30;
+    }
+
+    .mobile .opening{
+        left:0;
+
+
     }
     
     .mobile .mobile__links a{
@@ -1628,6 +1640,59 @@ body{
     .mobile .mobile__links .mobile__options .mobile__options--submenu{
         height: 0;
         overflow: hidden;
+    }
+
+    .storenav{
+        width: 100%;
+        
+    }
+
+    .storenav .storenav__sub{
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        background: linear-gradient(90deg, rgba(62, 103, 150, 0.919) 11.38%, rgba(58, 120, 177, 0.8) 25.23%, rgb(15, 33, 110) 100%);
+        color: #e5e5e5;
+        font-size: 13px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+        font-family: "Motiva Sans", Sans-serif;
+        cursor: pointer;
+    }
+
+    .storenav .storenav__sub:hover{
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+    }
+
+    .storenav .storenav__storepop{
+        font-family: "Motiva Sans", Sans-serif;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+        padding: 8px 5px 8px 5px;
+        height: auto;
+        overflow:hidden;
+    }
+
+    .storenav .mobilenav__storepop{
+
+    }
+
+    .storenav .storenav__storepop a{
+        width: 100%;
+        text-decoration: none;
+        color: #e5e5e5;
+        font-size: 14px;
+        line-height: 18px;
+        height: 32px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        margin: 0px 10px 3px 13px;
+
+    }
+
+    .storenav .storenav__storepop a:hover{
+        text-decoration: underline;
     }
 }
 
