@@ -1644,7 +1644,16 @@ body{
 
     .storenav{
         width: 100%;
-        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .storenav a{
+        text-decoration: none;
+    }
+
+    .storenav .flex__spacer{
+        display: none;
     }
 
     .storenav .storenav__sub{
@@ -1665,21 +1674,21 @@ body{
         background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
     }
 
-    .storenav .storenav__storepop{
+    .storenav .popout{
         font-family: "Motiva Sans", Sans-serif;
         display: flex;
         flex-direction: column;
         background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
-        padding: 8px 5px 8px 5px;
+        padding: 0;
         height: auto;
         overflow:hidden;
     }
 
-    .storenav .mobilenav__storepop{
-
+    .storenav .popout a:first-child{
+        margin-top: 8px;
     }
 
-    .storenav .storenav__storepop a{
+    .storenav .popout a{
         width: 100%;
         text-decoration: none;
         color: #e5e5e5;
@@ -1691,9 +1700,67 @@ body{
 
     }
 
-    .storenav .storenav__storepop a:hover{
+    .storenav .popout a:hover{
         text-decoration: underline;
     }
+
+    .storenav .popout .subheader, .divider{
+        display: none;
+    }
+
+    .storenav .storenav__newpop{
+        flex-direction: row;
+        padding-top: 8px;
+    }
+
+    .storenav .storenav__newpop .storenav__newpop-left, .storenav__newpop-right{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .storenav .storenav__newpop .storenav__newpop-right{
+        border-left: 1px solid #333333;
+    }
+
+    .storenav .storenav__catpop div a{
+        display: none;
+    }
+
+    .storenav .storenav__catpop .storenav__catpop--one{
+        padding-top: 8px;
+    }
+
+    .storenav .storenav__catpop .storenav__catpop--one a{
+        display: block;
+    }
+
+    .storenav .storenav__catpop div .major{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #e5e5e5;
+        font-size: 14px;
+        line-height: 18px;
+        height: 32px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        margin: 0px 10px 3px 13px;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    .storenav .storenav__catpop div .subheader-mobile{
+        display: block;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 11px;
+        padding: 5px 5px 10px 2px;
+        margin-left: 13px;
+        color: #2EBFFF;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+
 }
 
 @media screen and (max-width:599px){
