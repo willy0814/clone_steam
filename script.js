@@ -1,19 +1,19 @@
 // code for desktop//
 
-let subStoreMenu = document.querySelector(".desktop__links--substores");
-let subComMenu = document.querySelector(".desktop__links--subcom");
-let mainStore = document.querySelector(".desktop__link--store");
-let mainCom = document.querySelector(".desktop__link--com");
-let subLangMenu = document.querySelector(".desktop__options--submenu");
-let mainLangMenu = document.querySelector(".desktop__options--lang");
+const subStoreMenu = document.querySelector(".desktop__links--substores");
+const subComMenu = document.querySelector(".desktop__links--subcom");
+const mainStore = document.querySelector(".desktop__link--store");
+const mainCom = document.querySelector(".desktop__link--com");
+const subLangMenu = document.querySelector(".desktop__options--submenu");
+const mainLangMenu = document.querySelector(".desktop__options--lang");
 let langClick = true;
 
-let gameStore = document.querySelector('.storenav__storepop');
-let gameNew = document.querySelector('.storenav__newpop');
-let gameCat = document.querySelector('.storenav__catpop');
-let gameStoreNav = document.querySelector('.gamestore');
-let gameNewNav = document.querySelector('.gamenew');
-let gameCatNav = document.querySelector('.gamecat');
+const gameStore = document.querySelector('.storenav__storepop');
+const gameNew = document.querySelector('.storenav__newpop');
+const gameCat = document.querySelector('.storenav__catpop');
+const gameStoreNav = document.querySelector('.gamestore');
+const gameNewNav = document.querySelector('.gamenew');
+const gameCatNav = document.querySelector('.gamecat');
 
 let highlightBig = document.querySelector('.highlight');
 let highlightSmalls = document.querySelectorAll('.highlightSelect');
@@ -64,6 +64,8 @@ function showPopFlex(subMenu){
 function hidePopFlex(subMenu){
     subMenu.classList.remove('popout-flex');
 }
+
+
 function showPopBlock(subMenu){
     subMenu.classList.add('popout-block');
 }
@@ -158,9 +160,44 @@ readmore.addEventListener('click', ()=>readMore())
 
 let mobileMenuButton = document.querySelector(".menu-button");
 let sideBar = document.querySelector('.mobile__links');
+let mobileStoreNav = false;
+let mobileNewNav = false;
+let mobileCatNav = false;
 
 function sideBarOpen(){
     sideBar.classList.add('opening');
 }
 
+function showMobileStorePop(){
+    if(mobileStoreNav === false){
+        gameStore.classList.add('popoutflex');
+        mobileStoreNav = true;
+    }else {
+        gameStore.classList.remove('popoutflex');
+        mobileStoreNav = false;
+    }
+}
+function showMobileNewPop(){
+    if(mobileNewNav === false){
+    gameNew.classList.add('popoutflex');
+        mobileNewNav = true;
+    }else {
+        gameNew.classList.remove('popoutflex');
+        mobileNewNav = false;
+    }
+}
+function showMobileCatPop(){
+    if(mobileCatNav === false){
+        gameCat.classList.add('popoutflex');
+        mobileCatNav = true;
+    }else {
+        gameCat.classList.remove('popoutflex');
+        mobileCatNav = false;
+    }
+}
+
+
 mobileMenuButton.addEventListener('click', ()=>sideBarOpen());
+gameCatNav.addEventListener('click', ()=>showMobileCatPop());
+gameNewNav.addEventListener('click', ()=>showMobileNewPop());
+gameStoreNav.addEventListener('click', ()=>showMobileStorePop());
