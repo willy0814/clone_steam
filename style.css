@@ -2888,6 +2888,1016 @@ body{
         height: 13px;
         border-right: 1px solid #61686D;
     }
+
+    section{
+        background-image: url('https://cdn.akamai.steamstatic.com/steam/apps/2682370/page_bg_generated_v6b.jpg?t=1707232368');
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #c6d4df;
+        font-size: 12px;
+        position: relative;
+        padding:0.2px;
+        background-color: rgba(27,40,56,1);
+    }
+
+    .gametitle{
+        position: relative;
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .gametitle .gametitle__breadcrumbs{
+        padding-top: 10px;
+    }
+
+    .gametitle .gametitle__breadcrumbs a{
+        color: #8f98a0;
+        font-size: 12px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .gametitle .gametitle__breadcrumbs a:hover{
+        color: #ffffff;
+    }
+
+    .gametitle .gametitle__title{
+        display: flex;
+        justify-content: space-between;
+        min-height: 46px;
+    }
+
+    .gametitle .gametitle__title h2{
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        padding-left: 0px;
+        font-size: 26px;
+        line-height: 32px;
+        margin: 0;
+        color: #ffffff;
+    }
+    
+    .gametitle .gametitle__title .gametitle__title--community{
+        border-radius: 2px;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: #67c1f5;
+        background: rgba( 103, 193, 245, 0.2 );
+        padding: 0 15px;
+        font-size: 15px;
+        line-height: 30px;
+        height:32px;
+    }
+
+    .gametitle .gametitle__title .gametitle__title--community:hover{
+        background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+        color: #fff;
+    }
+
+    .gamehighlight{
+        background: linear-gradient(to right, rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%);
+        width: 100%;
+        padding-bottom: 12px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    
+    .gamehighlight .gamehighlight__left{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .gamehighlight .gamehighlight__left .highlight{
+        width: 100%;
+        margin-right:16px;
+        overflow:hidden;
+        display: flex;
+    }
+
+    .gamehighlight .gamehighlight__left .highlight img{
+        width: 100%;
+        height: 337px;
+        display: inline-block;
+        flex-shrink: 0;
+        
+    }
+
+    .gamehighlight .gamehighlight__left .highlightctn{
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin: 4px 0;
+    }
+
+    .gamehighlight .gamehighlight__left .highlightctn .highlightfilm{
+        display: flex;
+    }
+
+    .gamehighlight .gamehighlight__left .highlightctn .selector{
+        position: absolute;
+        background-image: url( /public/images/v5/game_highlight_activethumb.png );
+        width: 116px;
+        height: 77px;
+        z-index: 50;
+        top: -10px;
+        left: 2px;
+        pointer-events: none;
+    }
+    
+    .gamehighlight .gamehighlight__left .highlightctn img{
+        flex-shrink:0;
+        display: inline-block;
+        height: 65px;
+        width: 116px;
+        cursor: pointer;
+        text-align: center;
+        margin: 2px;
+        background-color: #000000;
+        position: relative;
+    }
+
+    .gamehighlight .gamehighlight__left .slider{
+        display: flex;
+        width: 100%;
+        height: 18px;
+    }    
+
+    .gamehighlight .gamehighlight__left .slider button{
+        background-color: rgba( 35, 60, 81, 0.4 );
+        width: 38px;
+        border-radius: 3px;
+        height: 100%;
+        border: none;
+        cursor:pointer;
+    }
+
+
+    .gamehighlight .gamehighlight__left .slider button:hover, .handle:hover{
+        background: #3d6c8d;
+    }
+
+    .gamehighlight .gamehighlight__left .slider .slider__bg{
+        background-color: rgba( 0, 0, 0, 0.2 );
+        width: calc(100% - 76px);
+    }
+
+    .gamehighlight .gamehighlight__left .slider .slider__bg .handle{
+        width: 60px;
+        border-radius: 3px;
+        height: 100%;
+        border: none;
+        background-color: rgba( 35, 60, 81, 0.4 );
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .gamehighlight .gamehighlight__left .slider .slider__bg .handle:hover{
+        background: #3d6c8d;  
+    }
+
+    .gamehighlight .gamehighlight__right{
+        width: 100%;
+    }
+
+    .gamehighlight .gamehighlight__right .gameheaderimg{
+        margin-bottom: 7px;
+        width: 100%;
+    }
+
+    .gamehighlight .gamehighlight__right .gameheaderimg img{
+        width: calc(100% - 10px);
+        height: auto;
+    }
+
+    .gamehighlight .gamehighlight__right .gamedescription{
+        max-height: 111px;
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 18px;
+        padding: 0 16px;
+    }
+
+    .gamehighlight .gamehighlight__right .gameglance{
+        margin-top:10px;
+        padding: 0 16px;
+    }
+
+    .gamehighlight .gamehighlight__right .gameglance .release{
+        margin-top: 9px;
+        margin-bottom: 13px;
+    }
+
+
+    .gamehighlight .gamehighlight__right .gameglance .cate{
+        
+
+        padding-right: 14px;
+        width: 100%;
+
+    }
+
+    .gamehighlight .gamehighlight__right .gameglance .cate span{
+        width:104px;
+        display: inline-block;
+        line-height: 16px;
+        color: #556772;
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+
+    .gamehighlight .gamehighlight__right .tags{
+        color: #556772;
+        margin: 10px 0;
+        padding: 0 16px;
+    }
+
+    .gamehighlight .gamehighlight__right .tags ul{
+        list-style-type: none;
+        display: flex;
+        margin: 0 2px;
+        padding: 0;
+        height: 22px;
+    }
+
+    .gamehighlight .gamehighlight__right .tags ul li{
+        color: #67c1f5;
+        line-height: 19px;
+        padding: 0 7px;
+        background-color: rgba( 103, 193, 245, 0.2 );
+        box-shadow: none;
+        margin-right: 2px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-bottom: 3px;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 11px;
+
+    }
+
+    .gamehighlight .gamehighlight__right .tags ul li:hover{
+        color: #ffffff;
+        background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    }
+
+    .queue__ctn{
+        width: 100%;
+        background: rgba( 0, 0, 0, 0.2 );
+        margin: 0px auto;
+        margin-bottom: 16px;
+    }
+
+    .queue__ctn p{
+        padding: 16px;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    .page{
+        display: flex;
+        width: 100%;
+        margin: 0 auto 20px auto;
+        flex-direction: column-reverse;
+    }
+
+    .page .leftpage{
+        width: 95%;
+        margin: auto 16px;
+        color: #acb2b8;
+        font-size: 14px;
+    }
+
+    .page .leftpage .earlyAccess{
+        border: 1px solid #4e81ae;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__heading{
+        padding: 10px 10px;
+        color: #b8e0fd;
+        font-size: 13px;
+        background: linear-gradient(135deg, rgba(87,164,208,1) 0%,rgba(48,93,122,1) 100%);
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__heading h1{
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+        font-weight: normal;
+        font-style: normal;
+        color: #fff;
+        margin: 0;
+        text-shadow: -1px -1px 0px rgba(0,0,0,0.2);
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__heading h2{
+        background-image: none;
+        height: auto;
+        color: #fff;
+        letter-spacing: 0px;
+        padding-top: 0px;
+        text-transform: none;
+        margin: 0px;
+        text-shadow: -1px -1px 0px rgba(0,0,0,0.2);
+        font-size: 15px;
+        line-height: 26px;;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__heading p{
+        margin: 0;
+        padding: 0;
+        color: #b8e0fd;
+        font-size: 13px;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__heading p span{
+        color: #f9be3e;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__heading p a{
+        color: inherit;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body{
+        padding: 0px 10px 10px 10px;
+        position: relative;
+        font-family: "Motiva Sans", Sans-serif;
+
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body .devs__say{
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        font-size: 11px;
+        color: #61686d;
+        margin: 10px 0 0 0;
+        text-transform: uppercase;
+        font-style: normal;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body .devs__expander{
+        font-weight: normal;
+        font-style: italic;
+        font-size: 14px;
+        color: #8f98a0;
+        line-height: 21px;
+        max-height: 113px;
+        overflow: hidden;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body .devs__expander.expand{
+        max-height: none;
+    }
+
+
+    .page .leftpage .earlyAccess .earlyAccess__body .devs__expander h1{
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 500;
+        font-weight: normal;
+        font-size: 14px;
+        color: #fff;
+        margin: 10px 0 0 0;
+        line-height: 21px;
+        font-style:italic;
+
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body .readmore{
+        position: absolute;
+        display: block;
+        right: 0px;
+        padding-right: 15px;
+        padding-top: 3px;
+        height: 15px;
+        bottom: 10px;
+        padding-left: 30px;
+        background: linear-gradient(to right, rgba(27,40,56,0) 0%,rgba(27,40,56,1) 15%,rgba(27,40,56,1) 100%);
+        text-transform: uppercase;
+        color: #67c1f5;
+        font-size: 11px;
+        text-decoration: none;
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body .readmore:hover{
+        color: #fff;
+
+    }
+
+    .page .leftpage .earlyAccess .earlyAccess__body .readmore.gone{
+        display: none;
+    }
+
+    .page .leftpage .leftbox{
+        margin-bottom: 28px;
+        position: relative;
+        background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
+        border-radius: 4px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+        color: #c6d4df;
+        padding: 16px;
+        padding-bottom: 16px;
+        padding-bottom: 26px;
+
+    }
+
+    .page .leftpage .leftbox .leftbox__main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .page .leftpage .leftbox .leftbox__main .headerbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page .leftpage .leftbox .leftbox__main .headerbox h1{
+        margin-bottom: 0;
+    }
+
+    .page .leftpage .leftbox .purchase2box__main{
+        display: block;
+    }
+
+    .page .leftpage .leftbox .purchase2box__main p{
+        margin: 0;
+    }
+
+    .page .leftpage .leftbox .purchase2box__main .sale{
+        padding: 6px;
+        margin: 8px -6px 0 -6px;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .page .leftpage .leftbox .icon{
+        background-image: url( '/img/icon_platform_win.png' );
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+    }
+
+    .page .leftpage .leftbox .cartbox{
+        position: absolute;
+        right: 16px;
+        bottom: -17px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: right;
+        display: flex;
+    }
+
+    .page .leftpage .leftbox .cartbox .price{
+        vertical-align: bottom;
+        display: inline-block;
+        background-color: #000000;
+        padding: 2px 2px 2px 0px;
+        border-radius: 2px;
+        font-size: 13px;
+        padding-left: 12px;
+        line-height:32px;
+    }
+
+    .page .leftpage .leftbox .cartbox .price .greencart{
+        border-radius: 2px;
+        border: none;
+        padding: 1px;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none !important;
+        color: #d2efa9;
+        background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+        text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0.3 );
+        margin-left: 14px;
+        padding: 0 15px;
+    }
+
+    .page .leftpage .leftbox .cartbox .price .greencart:hover{
+        background: linear-gradient( to bottom, #8ed629 5%, #6aa621 95%);
+		background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
+        color: #fff;
+    }
+
+    .page .leftpage .purchase2box .cartbox span{
+        font-size: 10px;
+    }
+
+    .page .leftpage .purchase2box .bun{
+        cursor: default;
+        color: #A4D7F5;
+        font-size: 18px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 200;
+    }
+
+    .page .leftpage .purchase2box .cartbox .price{
+        display: flex;
+        justify-content: space-between;
+        height: 36px;
+        width: 270px;
+        padding-left: 2px ;
+    }
+
+    .page .leftpage .purchase2box .cartbox .price .discount{
+        text-decoration: none;
+        color: #b0aeac;
+        border-right: 1px solid #626366;
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        font-size: 25px;
+        text-align: center;
+        overflow: hidden;
+        padding: 0 6px;
+    }
+
+    .page .leftpage .purchase2box .cartbox .price .yprice{
+        line-height:1.3;
+        color: white;
+        margin-left: 10px;
+    }
+
+    .page .leftpage .purchase2box .cartbox .bundle{
+        vertical-align: bottom;
+        display: inline-block;
+        background-color: rgba(0,0,0,0.5);
+        background-color: #000000;
+        padding: 2px 2px 2px 2px;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        margin-right: 2px;
+    }
+
+    .page .leftpage .purchase2box .cartbox .bundle a{
+        border-radius: 2px;
+        border: none;
+        padding: 1px;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: #d2efa9;
+        background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%);;
+        text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0.3 );
+        padding: 0 15px;
+        font-size: 15px;
+        line-height: 32px;
+    }
+
+    .page .leftpage .purchase2box .cartbox .bundle a:hover{
+        background: linear-gradient( to bottom, #8ed629 5%, #6aa621 95%);
+		background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%);
+    }
+
+    .page .leftpage .announcement{
+        margin-top: 47px;
+    }    
+
+    .page .leftpage .announcement .announcement__header{
+        display: flex;
+        justify-content: space-between;
+        background-image: url( /public/images/v6/maincol_gradient_rule.png );
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        position: static;
+    }
+
+    .page .leftpage .announcement h2{
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 0 10px;
+        letter-spacing: 0.03em;
+        font-weight: normal;
+        padding-top: 2px;
+    }
+
+    .page .leftpage .announcement .moreview{
+        background: transparent;
+        border: 1px solid rgba(255,255,255,.4);
+        border-radius: 2px;
+        color: #fff;
+        font-size: 11px;
+        padding: 2px 15px;
+        height: 19px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .page .leftpage .announcement .moreview:hover{
+        border-color: #fff;
+        color:#1a9fff;
+    }
+
+    .page .leftpage .announcement .announcement__updatepic{
+        font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
+        display: flex;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic{
+        display: block;
+        height: auto;
+        margin-bottom: 8px;
+        flex-grow: 1;
+        flex-basis: 0;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        min-width: 250px;
+        min-height: 256px;
+        background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+        box-shadow: 2px 2px 10px rgba(0,0,0,.4);
+        border-radius: 4px;
+        margin-right: 8px;
+        background: url(https://clan.akamai.steamstatic.com/images/44821507/26b46161aa7ced58b8e71895da8f71bc0f22cc97_400x225.png);
+        background-size:contain;
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic .desc{
+        position: absolute;
+        bottom: 0;
+        height: 85px;
+        padding: 12px;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.808);
+        font-size: 13px;
+        width: 100%;
+        backdrop-filter: blur(10px);
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic .desc h3{
+        font-size: 15px;
+        margin: 0;
+        line-height: 19px;
+        color: #fff;
+        max-height: 39px;
+        margin-bottom: 4px;
+        overflow: hidden;
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic .desc p{
+        margin: 0;
+    }
+    
+    .page .leftpage .announcement .announcement__updatepic .pic .hovering{
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        background-color: rgba(21, 22, 25, 0.801);
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic:hover .hovering{
+        opacity: 1;
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic .hovering h4{
+        margin: 20px 20px 0 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: rgb(40, 155, 255);
+    }
+
+    .page .leftpage .announcement .announcement__updatepic .pic .hovering p{
+        margin: 10px 20px;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        line-height: 20px;
+        font-weight: 300;
+        overflow: hidden;
+    }
+
+    .page .leftpage .updatebutton{
+        display: flex;
+    }
+
+    .page .leftpage .updatebutton .icon{
+        height: 20px;
+        width: 20px;
+        fill: #fff;
+        margin-right: 5px;
+    }
+    
+    .page .leftpage .updatebutton a{
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,.4);
+        padding: 5px 15px;
+        font-size: 12px;
+        font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
+    }
+
+    .page .leftpage .updatebutton a:hover{
+        border-color: #fff;
+    }
+
+    .page .leftpage .bug{
+        background: linear-gradient(135deg, rgba(68,75,84,1) 0%,rgba(91,98,108,1) 100%);
+        width: 100%;
+        margin-top: 10px;
+        height: 61px;
+        display: flex;
+    }
+
+    .page .leftpage .bug img{
+        background-image: url(/public/images/v5/earlyaccess_bug.png);
+        height: 61px;
+        width: 63px;
+    }
+
+    .page .leftpage .bug p{
+        display: block;
+        color: #fff;
+        font-size: 15px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 350px;
+        padding-top: 12px;
+    }
+
+    .page .leftpage .bug a{
+        color: #67c1f5;
+        text-decoration: none;
+        width: 162px;
+        height: 36px;
+        margin: auto;
+        text-align: center;
+        line-height: 36px;
+        border: 2px solid black;
+        border-radius: 4px;
+        background-color: #174661;
+    }
+
+    .page .leftpage .bug a:hover{
+        color: #fff;
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); ;
+    }
+
+
+    .page .rightpage{
+        margin-top: 16px;
+        overflow: hidden;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0;
+    }
+
+    .page .rightpage .rightbox{
+        background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+        padding: 16px;
+        margin-bottom: 8px;
+        margin-top: 0;
+    }
+
+    .page .rightpage .category  a{
+        margin-bottom: 2px;
+        background-color: rgba( 0, 0, 0, 0.2 );
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    
+    .page .rightpage .category  a .icon{
+        padding: 0px 6px;
+        display: flex;
+    }
+    
+    .page .rightpage .category  a .label{
+        color: #66c0f4;
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 8px;
+        height: 100%;
+        background: rgba( 103, 193, 245, 0.1 );
+        width: 100%;
+        border-radius: 1px;
+    }
+    .page .rightpage .category  a:hover .label{
+        text-decoration: none;
+        color: #ffffff;
+        background: #67c1f5;
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+    }
+    .page .rightpage .category  a .icon img{
+        width: 26px;
+        height: 16px;
+    }
+    .page .rightpage .others{
+        margin-top: 12px;
+    }
+    .page .rightpage .others a{
+        margin-top: 8px;
+        margin-bottom: 2px;
+    }
+    .page .rightpage .star{
+        display: flex;
+        margin-top: 16px;
+        margin-bottom: 2px;
+        height: 32px;
+    }
+    .page .rightpage .star .icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        margin-right: 12px;
+        margin-top: 2px;
+        font-size: 17px;
+    }
+
+    .page .rightpage .blocktitle {
+        font-size: 12px;
+        color: #8f98a0;
+        margin-bottom: 2px;
+        font-weight: normal;
+    }
+
+    .page .rightpage .langcheck table{
+        border-collapse: collapse;
+    }
+
+    .page .rightpage .langcheck table tr{
+        border-bottom: 1px solid #626366;
+    }
+
+    .page .rightpage .langcheck table tr th{
+        width: 62px;
+        font-size: 12px;
+        color: #b0aeac;
+        font-weight: normal;
+    }
+
+    .page .rightpage .langcheck table tr th:first-of-type{
+        width: 94px;
+    }
+
+    .page .rightpage .langcheck table tr td{
+        font-weight: bold;
+        color: #67c1f5;
+        padding: 3px 0px 3px 0px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .page .rightpage .langcheck table tr td:first-of-type{
+        width: 105px;
+        text-align: left;
+        color: #8f98a0;
+        font-weight: normal;
+    }
+
+    .page .gameachieve .achievepics{
+        display: flex;
+        padding: 4px 0px 4px 0px;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+    .page .gameachieve .achievepics img{
+        width: 64px;
+        height: 64px;
+        margin-right: 4px;
+    }
+    .page .gameachieve .achievepics a{
+        background-color: rgba( 103, 193, 245, 0.2 );
+        border-radius: 1px;
+        font-size: 13px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        color: #67c1f5;
+        text-align: center;
+        height: 64px;
+        width: 64px;
+        padding: 0 4px;
+        margin-right: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        line-height: 14px;
+        text-decoration: none;
+    }
+
+    .page .gameachieve .achievepics a:hover{
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .page .gameinfo{
+        color: #8f98a0;
+        line-height: 20px;
+    }
+
+    .page .gameinfo a{
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        color: #67c1f5;
+        text-decoration: none;
+    }
+
+    .page .gameinfo a:hover{
+        color:#fff
+    }
+
+    .page .gameinfo .kat{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #556772;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .page .gameinfo .gamehistory{
+        margin-top: 14px;
+    }
+
+    .page .gameinfo .gamehistory a{
+        min-height: 17px;
+        padding-top: 4px;
+        padding-left: 8px;
+        padding-bottom: 4px;
+        line-height: 17px;
+        background: rgba( 103, 193, 245, 0.1 );
+        color: #67c1f5;
+        border-radius: 1px;
+        display: block;
+        margin-bottom: 2px;
+    }
+    .page .gameinfo .gamehistory a:hover{
+        text-decoration: none;
+        color: #ffffff;
+        background: #67c1f5;
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+    }
+
+    .page .sharebox{
+        display: flex;
+    }
+
+    .page .sharebox a{
+        border-radius: 2px;
+        border: none;
+        padding: 1px;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: #67c1f5;
+        background: rgba( 103, 193, 245, 0.2 );
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        padding: 0 15px;
+        font-size: 15px;
+        margin-right: 3px;
+    }
+
+    .page .sharebox a:hover{
+        text-decoration: none;
+        color: #ffffff;
+        background: #67c1f5;
+        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+    }
+
+    footer{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width:599px){
