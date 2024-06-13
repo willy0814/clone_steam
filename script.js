@@ -163,9 +163,66 @@ let sideBar = document.querySelector('.mobile__links');
 let mobileStoreNav = false;
 let mobileNewNav = false;
 let mobileCatNav = false;
+const mobileClosingButton = document.querySelector(".closing");
+const sideBarStoreBtn = document.querySelector(".mobile__link--store");
+const sideBarCommBtn = document.querySelector(".mobile__link--com");
+const sideBarLangBtn = document.querySelector(".mobile__options--lang");
+const sideBarStore = document.querySelector(".mobile__links--substores");
+const sideBarComm = document.querySelector(".mobile__links--subcom");
+const sideBarLang = document.querySelector(".mobile__options--submenu");
+let sideBarStor = false;
+let sideBarCom = false;
+let sideBarLan = false;
+
+function sideBarStoreShow(){
+    if(sideBarStor === false){
+        sideBarStore.classList.add('menopen');
+        sideBarStor = true;
+    }else{
+        sideBarStore.classList.remove('menopen');
+        sideBarStor = false;
+    }
+}
+
+function sideBarCommShow(){
+    if(sideBarCom === false){
+        sideBarComm.classList.add('menopen');
+        sideBarCom = true;
+    }else{
+        sideBarComm.classList.remove('menopen');
+        sideBarCom = false;
+    }
+}
+
+function sideBarLangShow(){
+    if(sideBarLan === false){
+        sideBarLang.classList.add('menopen');
+        sideBarLan = true;
+    }else{
+        sideBarLang.classList.remove('menopen');
+        sideBarLan = false;
+    }
+}
+
 
 function sideBarOpen(){
     sideBar.classList.add('opening');
+}
+
+function sideBarClosing(){
+    sideBar.classList.remove('opening');
+}
+
+function sideBarMenuShow(sideBarMen, tick){
+    if(tick === false){
+        sideBarMen.classList.add('menopen');
+        tick = true;
+    }else{
+        sideBarMen.classList.remove('menopen');
+        tick = false;
+    }
+    console.log(tick);
+    console.log(sideBarStor);
 }
 
 function showMobileStorePop(){
@@ -198,6 +255,10 @@ function showMobileCatPop(){
 
 
 mobileMenuButton.addEventListener('click', ()=>sideBarOpen());
+mobileClosingButton.addEventListener('click', ()=>sideBarClosing());
 gameCatNav.addEventListener('click', ()=>showMobileCatPop());
 gameNewNav.addEventListener('click', ()=>showMobileNewPop());
 gameStoreNav.addEventListener('click', ()=>showMobileStorePop());
+sideBarStoreBtn.addEventListener('click', ()=>sideBarStoreShow());
+sideBarCommBtn.addEventListener('click', ()=>sideBarCommShow());
+sideBarLangBtn.addEventListener('click', ()=>sideBarLangShow());
