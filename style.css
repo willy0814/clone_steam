@@ -584,16 +584,17 @@ body{
     .gamehighlight .gamehighlight__left .slider .slider__bg{
         background-color: rgba( 0, 0, 0, 0.2 );
         width: calc(600px - 76px);
+        position: relative;
     }
 
     .gamehighlight .gamehighlight__left .slider .slider__bg .handle{
+        position:absolute;
         width: 60px;
         border-radius: 3px;
-        height: 100%;
+        height: 18px;
         border: none;
         background-color: rgba( 35, 60, 81, 0.4 );
         cursor: pointer;
-        transition: 0.5s;
     }
 
     .gamehighlight .gamehighlight__left .slider .slider__bg .handle:hover{
@@ -1994,7 +1995,7 @@ body{
         width: 600px;
         height: 18px;
     }    
-
+    
     .gamehighlight .gamehighlight__left .slider button{
         background-color: rgba( 35, 60, 81, 0.4 );
         width: 38px;
@@ -2003,13 +2004,14 @@ body{
         border: none;
         cursor:pointer;
     }
-
-
+    
+    
     .gamehighlight .gamehighlight__left .slider button:hover, .handle:hover{
         background: #3d6c8d;
     }
-
+    
     .gamehighlight .gamehighlight__left .slider .slider__bg{
+        position:relative;
         background-color: rgba( 0, 0, 0, 0.2 );
         width: calc(600px - 76px);
     }
@@ -2021,7 +2023,7 @@ body{
         border: none;
         background-color: rgba( 35, 60, 81, 0.4 );
         cursor: pointer;
-        transition: 0.5s;
+        position:absolute;
     }
 
     .gamehighlight .gamehighlight__left .slider .slider__bg .handle:hover{
@@ -3113,7 +3115,6 @@ body{
         border: none;
         background-color: rgba( 35, 60, 81, 0.4 );
         cursor: pointer;
-        transition: 0.5s;
     }
 
     .gamehighlight .gamehighlight__left .slider .slider__bg .handle:hover{

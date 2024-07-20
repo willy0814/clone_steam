@@ -23,12 +23,13 @@ let totalSlider = highlightSmalls.length;
 let lftBtn = document.querySelector('.lft__btn');
 let rghtBtn = document.querySelector('.rght__btn');
 
-let handle = document.querySelector('.handle');
-let highlightfilm = document.querySelector('.highlightfilm');
+
 let selector = document.querySelector('.selector');
 
 let readmore = document.querySelector('.readmore');
 let devexpander = document.querySelector('.devs__expander');
+
+
 
 function showSubMenu(subMenu){
     subMenu.style.opacity='1';
@@ -112,19 +113,7 @@ function slideRight(){
 
 }
 
-function handleRight(){
-    if(highlightIndex = totalSlider-1){
-        handle.style.marginLeft ='auto';
-        highlightfilm.style.transform = `translateX(-122px)`;
-    }
-}
 
-function handleLeft(){
-    if(highlightIndex = 0){
-        handle.style.marginLeft ='0';
-        highlightfilm.style.transform = `translateX(0)`;
-    }
-}
 
 function readMore(){
     devexpander.classList.add('expand');
@@ -155,6 +144,63 @@ gameCatNav.addEventListener('mouseleave', ()=>hidePopFlex(gameCat));
 lftBtn.addEventListener('click', ()=>slideLeft());
 rghtBtn.addEventListener('click', ()=>slideRight());
 readmore.addEventListener('click', ()=>readMore())
+
+//code for custom scroll
+
+let startX;
+let x = 0;
+let sliderPercent = 0;
+const handle = document.querySelector('.handle');
+const sliderBg = document.querySelector('.slider__bg');
+const highlightFilm = document.querySelector('.highlightfilm');
+const highlightFilmCtn = document.querySelector('.highlightctn');
+let highlightDiff = highlightFilmCtn.offsetWidth - highlightFilm.offsetWidth;
+if(highlightDiff < 0){
+    highlightDiff = 0;
+}
+
+
+handle.addEventListener('pointerdown', dragStart);
+
+function dragStart(event){
+    startX = event.clientX;
+
+    window.addEventListener('pointermove', drag);
+    window.addEventListener('pointerup', stopDrag);
+}
+
+function drag(event){
+    event.preventDefault();
+    let moveX = event.clientX - startX;
+
+    let tempX = x + moveX;
+    let tempPercent = tempX/(sliderBg.offsetWidth - handle.offsetWidth);
+
+    if (tempX < 0) tempX = 0;
+    else if (tempX > sliderBg.offsetWidth - handle.offsetWidth) tempX = sliderBg.offsetWidth - handle.offsetWidth;
+
+    handle.style.left = tempX + "px";
+    highlightFilm.style.transform = `translateX(-${highlightDiff * tempPercent}px)`;
+}
+
+function stopDrag(event) {
+    let moveX = event.clientX - startX;
+    
+    x = x + moveX;
+    
+    if (x < 0) x = 0;
+    else if (x > sliderBg.offsetWidth - handle.offsetWidth) x = sliderBg.offsetWidth - handle.offsetWidth;
+    
+    handle.style.left = x + "px";
+    
+    window.removeEventListener("pointermove", drag);
+    window.removeEventListener("pointerup", stopDrag);
+    sliderPercent = x/(sliderBg.offsetWidth - handle.offsetWidth);
+    highlightFilm.style.transform = `translateX(-${highlightDiff * sliderPercent}px)`
+    console.log(sliderPercent);
+}
+
+
 
 //code for mobile
 
